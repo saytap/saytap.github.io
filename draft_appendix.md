@@ -1,13 +1,13 @@
 ## Acknowledgements
 
-The authors would like to thank [Tingnan Zhang](https://scholar.google.com/citations?user=RM2vMNcAAAAJ&hl=en), Linda Luu, [Kuang-Huei Lee](https://twitter.com/kuanghueilee), [Vincent Vanhoucke](https://vincent.vanhoucke.com/) and [Douglas Eck](https://twitter.com/douglas_eck) for their valuable discussions and support on the experiments.
+The authors would like to thank [Tingnan Zhang](https://scholar.google.com/citations?user=RM2vMNcAAAAJ&hl=en), Linda Luu, [Kuang-Huei Lee](https://twitter.com/kuanghueilee), [Vincent Vanhoucke](https://vincent.vanhoucke.com/) and [Douglas Eck](https://twitter.com/douglas_eck) for their valuable discussions and technical support in the experiments.
 
 Any errors here are our own and do not reflect opinions of our proofreaders and colleagues. If you see mistakes or want to suggest changes, feel free to contribute feedback by participating in the [discussion forum](https://github.com/saytap/saytap.github.io/issues) for this article.
 
 The experiments in this work were performed on GPU virtual machines provided by [Google Cloud Platform](https://cloud.google.com/).
 
 <div style="text-align: left;">
-<img src="assets/icons/robot_dog.svg" alt="Robot Dog Icon by artist monkik on Noun Project." style="display: block; margin: auto; width: 4.5%;" align="left"/>&nbsp;&nbsp;Vision icon by artist <a href="https://thenounproject.com/kukkik_jung/">monkik</a>.
+<img src="assets/icons/robot_dog.svg" alt="Dog walk icon by artist Laymik on Noun Project." style="display: block; margin: auto; width: 4.5%;" align="left"/>&nbsp;&nbsp;Dog walk by Laymik from <a href="https://thenounproject.com/browse/icons/term/dog-walk/" target="_blank" title="dog walk Icons">Noun Project</a>.
 </div>
 
 <h2 id="citation">Citation</h2>
