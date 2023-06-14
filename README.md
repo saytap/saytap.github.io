@@ -1,6 +1,6 @@
 # SayTap: Language to Quadrupedal Locomotion
 
-This repo contains the videos for our [paper](https://arxiv.org/abs/xxx.xxxx).
+This repo contains the videos for our [paper](https://arxiv.org/abs/2306.07580).
 
 ### If all you want to do is view the page locally
 
@@ -47,7 +47,7 @@ BibTeX citation
 @article{saytap2023,
   author = {Yujin Tang and Wenhao Yu and Jie Tan and Heiga Zen and Aleksandra Faust and</br>Tatsuya Harada},
   title  = {SayTap: Language to Quadrupedal Locomotion},
-  eprint = {arXiv:xxxx.xxxxx},
+  eprint = {arXiv:2306.07580},
   url    = {https://saytap.github.io},
   note   = "\url{https://saytap.github.io}",
   year   = {2023}
