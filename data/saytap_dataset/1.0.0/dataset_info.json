@@ -1,0 +1,21 @@
+{
+  "citation": "@article{saytap2023,\n  author = {Yujin Tang and Wenhao Yu and Jie Tan and Heiga Zen and Aleksandra Faust and\nTatsuya Harada},\n  title  = {SayTap: Language to Quadrupedal Locomotion},\n  eprint = {arXiv:2306.07580},\n  url    = {https://saytap.github.io},\n  note   = \"\\url{https://saytap.github.io}\",\n  year   = {2023}\n}",
+  "description": "# SayTap Dataset\n\nThis dataset contains robot trajectories collected from a Unitree Go1 robot when\nthe robot followed simple instructions from the [SayTap](https://saytap.github.io) paper.\n\n## Dataset\nThe dataset contains trajectories from 20 experiments, where the Go1 robot \nfollowed the following commands:\n\n| #     | Command                                          |\n|-------|--------------------------------------------------|\n| 1     | Stand still                                      |\n| 2-5   | Raise your front/rear left/right leg.            |\n| 6     | Trot in place                                    |\n| 7-10  | Trot forward/backward slowly/fast                |\n| 11    | Pace in place                                    |\n| 12-15 | Move forward/backward slowly/fast in pacing gait |\n| 16    | Bound in place                                   |\n| 17-20 | Bound forward/backward slowly/fast               |\n\nIn each experiment, Go1 started from a standing still pose and is ready for a\nuser command. Receiving the instruction, Go1 reacted accordingly for 5 seconds\nand then resume to the standing still pose. Including the response time from a\nLLM, each trajectory's length is about 1000 steps.\n\n## Features\n\nThe features in each trajectory are:\n1. `image` - Type: `np.uint8`, shape: `(64, 64, 3)`. This is a dummy\nfeature because SayTap does not take visual information as its input.\n2. `wrist_image` - Type: `np.uint8`, shape: `(64, 64, 3)`. This is a dummy\nfeature because SayTap does not take visual information as its input.\n3. `state` - Type: `np.float32`, shape: `(30,)`. This contains Go1's base and\njoint states. `state[:3]` are the base's linear velocities, `state[3:6]`\ncontains the base's angular velocities, `state[6:18]` and `state[18:30]` are\nthe 12 joints' positions (offset from the default positions) and velocities.\n4. `proj_grav_vec` - Type: `np.float32`, shape: `(3,)`. This is the gravity\nvector `[0, 0, -1]` in Go1's base frame.\n5. `desired_vel` - Type: `np.float32`, shape: `(3,)`. This contains the desired\nvelocities, where the first 2 entries are the linear velocities along and\nperpendicular to the robot's heading direction and the last entry is the angular\nyaw velocity.\n6. `prev_act` - Type: `np.float32`, shape: `(12,)`. This contains the actions\napplied to the robot in the previous step.\n7. `desired_pattern` - Type: `np.bool`, shape: `(4, 5)`. This contains the\ndesired foot contact patterns for the front right, front left, rear right and\nrear left legs. `True` indicates foot on the ground and `False` stands for foot\nin the air. The length of the pattern is 5.\n\nThe default joint positions are: `hip=0`, `upper_leg=0.8` and `lower_leg=-1.7`.\n\n## License\nCC-BY-4.0",
+  "fileFormat": "tfrecord",
+  "moduleName": "saytap_dataset.saytap_dataset_dataset_builder",
+  "name": "saytap_dataset",
+  "releaseNotes": {
+    "1.0.0": "Initial release."
+  },
+  "splits": [
+    {
+      "filepathTemplate": "{DATASET}-{SPLIT}.{FILEFORMAT}-{SHARD_X_OF_Y}",
+      "name": "train",
+      "numBytes": "58024866",
+      "shardLengths": [
+        "20"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}
